@@ -28,7 +28,7 @@ Replace in config.js the base URI with the CID
 
 Then upload /build/json folder on server (pinata for example)
 
-Then publish erc721 minting smart contract with ifps json uri , cf tokenRUI function, simply change the CID with the json one:
+Then publish erc721 minting smart contract `ChatChienFactory.sol` with ifps json uri, cf tokenRUI function, simply change the CID with the json one:
 
 `function tokenURI(uint256 _tokenId) public pure override returns (string memory) { return string( abi.encodePacked( "https://gateway.pinata.cloud/ipfs/YOUR-CID/", Strings.toString(_tokenId), ".json" ) ); }`
 
