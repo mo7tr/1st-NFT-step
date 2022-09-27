@@ -1,0 +1,32 @@
+git clone https://github.com/HashLips/hashlips_art_engine.git
+
+in hashlips folder npm install => install hashlips
+
+Move layers in layers folders
+
+set config.js
+
+once set use node index.js => generate art collection
+
+node utils/rarity.js => give the details of every layers in quantity/percentage terms (using _metadata.json freshly generated in build/json directory)
+
+upload picture folder on server (pinata for exemple)
+
+copy CID from pinata
+
+replace in config.js the base URI with the CID
+
+node utils/update_info.js to update info in all json files
+
+then publish erc721 minting sc with ifps json uri for each new nft of the collection,
+owner must set a minimum price for minting before minting start
+
+Contract can be pusblished directly using remix
+
+advice: use goerli testnet, looks like rinkeby testnet not working anymore with opensea when i used it?
+
+Goerli pow faucet: https://goerli-faucet.pk910.de/
+
+MINT!
+
+see your freshly minted NFT on opensea :)
